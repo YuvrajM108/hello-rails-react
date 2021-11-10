@@ -1,0 +1,4 @@
+<div class="greeting-container">
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= react_component("Greeting", { message: @greeting }) %>
+</div>
