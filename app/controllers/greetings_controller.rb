@@ -1,8 +1,10 @@
-class GreetingsController < ApplicationController
+class V1::GreetingsController < ApplicationController
   def index
     @greetings = Greeting.all
-    @greeting = @greetings.sample
 
-    render json: @greeting
+    render json: @greetings
+  end
+
+  def show
   end
 end
