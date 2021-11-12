@@ -1,9 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const Greeting = ({ message }) => (
-  <React.Fragment>
-    <h1>{message}</h1>
-  </React.Fragment>
+  <div className="greeting-div">
+    <h1 className="greeting">{message}</h1>
+  </div>
 );
 
 Greeting.propTypes = {

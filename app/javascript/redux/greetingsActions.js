@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const GET_GREETING = 'greeting/message/GET_GREETING';
 
 const initialState = {
@@ -5,15 +7,10 @@ const initialState = {
 }
 
 export const getGreeting = () => async (dispatch) => {
-  const messages = await fetch('/api/v1/greetings',{
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-  });
+  const res = await axios.get('/v1/greetings');
+  const messages = res.data;
   const messageArr = [];
-  const randomMsg = '';
+  let randomMsg = '';
   if(messages) {
     messages.forEach((obj) => {
       const messageText = obj.message;
@@ -24,14 +21,17 @@ export const getGreeting = () => async (dispatch) => {
   }
   dispatch({
     type: GET_GREETING,
-    randomMsg,
+    payload: randomMsg,
   });
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_GREETING:
-      return action.payload;
+      return {
+        ...state,
+        message: action.payload,
+      }
     default:
       return state;
   }

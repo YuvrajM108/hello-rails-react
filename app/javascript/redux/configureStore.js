@@ -1,11 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import greetingReducer from './greetingsActions';
 
-const reducer = combineReducers({
-  greeting: greetingReducer,
+const reducers = combineReducers({
+  greetingReducer,
 });
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = createStore(
+  reducers, 
+  applyMiddleware(logger, thunk)
+);
 
 export default store;
