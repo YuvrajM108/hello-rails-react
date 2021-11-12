@@ -37,7 +37,9 @@
 
 ### Usage
 
-- In your integrated command line, ```rails server``` will launch the website on your default browser.
+- In your integrated command line, ```rails server``` will start the virtual server.
+
+- Visit ```localhost:3000``` in your browser to run the application.
 
 ## Authors
 
