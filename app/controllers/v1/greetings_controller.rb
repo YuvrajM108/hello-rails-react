@@ -5,6 +5,5 @@ class V1::GreetingsController < ApplicationController
     render json: @greetings
   end
 
-  def show
-  end
+  def show; end
 end
