@@ -33,6 +33,7 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   database: hello_world_production
   username: hello_rails_react
   password: <%= ENV['HELLO_RAILS_DATABASE_PASSWORD'] %>
