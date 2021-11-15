@@ -2,9 +2,7 @@
 
 # Hello Rails React
 
-> In this project I used Ruby On Rails create a Rails API for a React Redux front end that displays a greeting from the API.
-
-[Click here to view the repo of the React front end](https://github.com/YuvrajM108/hello-rails-react-front-end/tree/features)
+> In this project I used Ruby On Rails, React, and Redux to design a single-page application that displays a random greeting fetched from a Rails API.
 
 ![homepage-screenshot](./images/Screenshot.PNG)
 
